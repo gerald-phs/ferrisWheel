@@ -1,0 +1,135 @@
+.wheel {
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-left: 50px;
+    position: absolute;
+    height: 55vw;
+    width: 55vw;
+    max-width: 500px;
+    max-height: 500px;
+    animation-name: wheel;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  
+  .line {
+    background-color: black;
+    width: 50%;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 0%;
+  }
+  
+  .line:nth-of-type(2) {
+    transform: rotate(60deg);
+  }
+  .line:nth-of-type(3) {
+    transform: rotate(120deg);
+  }
+  .line:nth-of-type(4) {
+    transform: rotate(180deg);
+  }
+  .line:nth-of-type(5) {
+    transform: rotate(240deg);
+  }
+  .line:nth-of-type(6) {
+    transform: rotate(300deg);
+  }
+  
+  .cabin {
+    background-color: red;
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    border: 2px solid;
+    transform-origin: 50% 0%;
+    animation: cabins 10s linear infinite;
+  }
+  
+  /* V.L.A.V.A.A.V. (7)
+  V --> ermelho
+  L --> aranja
+  A --> marelo
+  V --> erde
+  A --> zul (Newton) / C --> iano (Moderno)
+  A --> nil, Índigo (Newton) / A --> zul (Moderno)
+  V --> ioleta (Newton/Moderno) 
+  ------------------------------------------------
+  R.O.Y.G.B.I.V. (Newton) / R.O.Y.G.C.B.V. (Modern)
+  blue's actually cyan, and actual blue comes a few nanometers “later”
+  with both models sharing violet as the last color of the spectrum
+  after violet comes ultraviolet, and under red, naturally,
+  infrared
+  ------------------------------------------------
+  idea: rainbows!!!!!!
+  implementation: 100/7 --> non-exact division
+  100/8 does it
+  */
+
+  .cabin:nth-of-type(1) {
+    right: -8.5%;
+    top: 50%;
+  }
+  .cabin:nth-of-type(2) {
+    right: 17%;
+    top: 93.5%;
+  }
+  .cabin:nth-of-type(3) {
+    right: 67%;
+    top: 93.5%;
+  }
+  .cabin:nth-of-type(4) {
+    left: -8.5%;
+    top: 50%;
+  }
+  .cabin:nth-of-type(5) {
+    left: 17%;
+    top: 7%;
+  }
+  .cabin:nth-of-type(6) {
+    right: 17%;
+    top: 7%;
+  }
+  
+  @keyframes wheel {
+     0% {
+       transform: rotate(0deg);
+     }
+     100% {
+       transform: rotate(360deg);
+     }
+  }
+  
+  @keyframes cabins {
+
+    0% {
+      transform: rotate(0deg);
+    }
+    12.5% {
+      background-color: red;
+    }
+    25% {
+      background-color: orange;
+    }
+    37.5% {
+      background-color: yellow;
+    }
+    50% {
+      background-color: green;
+    }
+    62.5% {
+    	background-color: cyan;
+    }
+    75% {
+      background-color: blue;
+    }
+    87.5% {
+    	background-color: violet;
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
